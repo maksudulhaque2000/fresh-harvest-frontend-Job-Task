@@ -1,7 +1,41 @@
+import React from "react";
+import Details from "./Details";
 
+interface Product {
+  id: string;
+  productName: string;
+  description: string;
+  price: number;
+  stock: number;
+  images: string[];
+  categoryId: string;
+  isDeleted: boolean;
+  createdAt: string;
+  updatedAt: string;
+}
 
-export default function Details() {
-  return (
-    <div>Details</div>
-  )
+interface ApiResponse<T> {
+  success: boolean;
+  message?: string;
+  data: T;
+}
+
+interface PageProps {
+  params: { id: string };
+}
+
+export default async function Page({ params: { id } }: PageProps) {
+
+  const res = await fetch(`https://code-commando.com/api/v1/products/${id}`, {
+    cache: "no-store",
+  });
+  if (!res.ok) {
+    throw new Error("Failed to load product");
+  }
+  const json: ApiResponse<Product> = await res.json();
+  if (!json.success) {
+    throw new Error(json.message || "API returned an error");
+  }
+
+  return <Details productData={json.data} />;
 }
