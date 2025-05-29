@@ -106,7 +106,7 @@ const Details: React.FC<DetailsProps> = ({ productData }) => {
         </div>
 
         <div className="mt-5 md:w-1/2">
-          <button className="text-primaryGreen bg-primaryGreen/10 font-medium py-1 px-2 rounded">
+          <button className="text-[#749B3F] bg-[#749B3F]/10 font-medium py-1 px-2 rounded">
             {categoryName}
           </button>
           <h3 className="text-3xl lg:text-5xl font-rubik font-medium pt-2">
@@ -164,7 +164,7 @@ const Details: React.FC<DetailsProps> = ({ productData }) => {
       </div>
 
       <div className="flex gap-3 items-center justify-start mt-5">
-        <button className="w-[140px] h-[45px] bg-primaryGreen text-white rounded-md">
+        <button className="w-[140px] h-[45px] bg-[#749B3F] text-white rounded-md">
           Description
         </button>
         <button className="w-[140px] h-[45px] bg-white text-slate-500 border border-slate-500 rounded-md">

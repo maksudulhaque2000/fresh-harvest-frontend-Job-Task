@@ -5,9 +5,6 @@ import CustomersFeedback from "./components/home/CustomersFeedback";
 import FreshProducts from "./components/home/FreshProducts";
 import SeasonalFruit from "./components/home/SeasonalFruit";
 
-
-
-
 export default function Home() {
   return (
     <div>

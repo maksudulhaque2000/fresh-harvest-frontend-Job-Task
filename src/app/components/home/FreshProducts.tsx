@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Loading from "@/app/loading";
 import SectionHeading from "../shared/SectionHeading";
-
 
 interface Product {
   id: string;
@@ -55,7 +55,6 @@ const FreshProducts: React.FC = () => {
           throw new Error(productData.message || "Failed to fetch products");
         }
 
-        // Fetch categories
         const categoryResponse = await fetch(
           "https://test-2-tan-chi.vercel.app/api/v1/category"
         );
@@ -90,6 +89,16 @@ const FreshProducts: React.FC = () => {
       );
     }
   };
+
+ 
+  if (loading) {
+    return <Loading/>;
+  }
+
+ 
+  if (error) {
+    return <p className="text-center text-red-600">Error: {error}</p>;
+  }
 
   return (
     <div className="max-w-[1200px] mx-auto p-4 mt-10">
@@ -128,7 +137,7 @@ const FreshProducts: React.FC = () => {
         {Array.isArray(filteredProducts) && filteredProducts.length > 0 ? (
           filteredProducts.slice(0, 8).map((product: Product) => (
             <Link href={`/details/${product.id}`} key={product.id}>
-              <div className="border p-2 rounded-lg shadow-md flex flex-col items-center hover:shadow-lg transition-shadow duration-300 cursor-pointer">
+              <div className="border border-gray-200 p-4 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer bg-white">
                 <img
                   src={product.images[0] || "/404.png"}
                   alt={product.productName}
@@ -145,13 +154,15 @@ const FreshProducts: React.FC = () => {
             </Link>
           ))
         ) : (
-          <p className="col-span-full text-center text-gray-600">No products available</p>
+          <p className="col-span-full text-center text-gray-600 text-2xl my-4">No products available right Now...</p>
         )}
       </div>
       <div className="flex justify-center">
+          <Link href={"/shop"}>
           <button className="border border-[#FF6A1A] text-[#FF6A1A] font-bold bg-transparent px-5 py-3 text-center max-w-[203px] hover:bg-[#FF6A1A] my-10 rounded-lg hover:text-white transition-colors duration-300">
             See all Products
           </button>
+          </Link> 
       </div>
     </div>
   );

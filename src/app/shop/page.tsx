@@ -93,7 +93,7 @@ export default async function ShopPage() {
                   />
                 </div>
                 <h3 className="text-lg font-bold text-gray-800 mb-2">{product.productName}</h3>
-                <p className="text-xl font-semibold text-primaryGreen mb-4">${product.price.toFixed(2)}</p>
+                <p className="text-xl font-semibold text-[#749B3F] mb-4">${product.price.toFixed(2)}</p>
                 <button className="w-full border-[#D9D9D9] hover:border-white text-[#212337] border-2 p-2 mt-4 rounded-lg bg-white hover:text-white hover:bg-[#FF6A1A] transition duration-300">
                   Add to Cart
                 </button>

@@ -1,4 +1,5 @@
 'use client';
+
 export default function Banner() {
   return (
     <div>
@@ -22,7 +23,7 @@ export default function Banner() {
                 <button className="bg-[#FF6A1A] text-white font-medium py-1 px-2 mt-4 rounded">Shop Now</button>
 
 
-                <div className="bg-gray-200 py-4 rounded-xl flex flex-col md:flex-row justify-between items-center px-4 lg:ml-60 lg:mr-8 mt-8">
+                <div className="bg-gray-200 py-4 rounded-xl flex flex-col md:flex-row justify-between items-center px-4 lg:ml-60 lg:mr-8 mt-8 lg:w-88">
                   <div className="pl-2 space-y-2">
                     <p className="font-rubik text-[#749B3F]">Special Offer</p>
                     <h4 className="text-xl font-rubik font-semibold">Fresh Salad</h4>
