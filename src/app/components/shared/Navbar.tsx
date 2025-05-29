@@ -9,6 +9,7 @@ import { VscMenu } from "react-icons/vsc";
 
 import { LuShoppingCart } from "react-icons/lu";
 import Button from "./Button";
+import AuthModals from "../ui/AuthModals";
 
 interface User {
   uid: string;
@@ -21,6 +22,19 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(true);
   const [navbar, setNavbar] = useState<boolean>(false);
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [isRegisterOpen, setIsRegisterOpen] = useState(false);
+
+  const handleLoginOpen = () => {
+    setIsLoginOpen(true);
+    setIsRegisterOpen(false);
+  };
+
+  const handleRegisterOpen = () => {
+    setIsLoginOpen(false);
+    setIsRegisterOpen(true);
+  };
 
   const router = useRouter();
   const pathname = usePathname();
@@ -109,9 +123,6 @@ const Navbar: React.FC = () => {
                     <div>
                       <Link href='/favorites' className="text-xl font-semibold font-lato">Favorites</Link>
                     </div>
-                    <Link href='/login'>
-                      <button className="text-lg font-semibold font-lato">Login</button>
-                    </Link>
                     {
                       user ? <div onClick={handleMenu} className="w-full flex justify-center focus:outline-none cursor-pointer relative group">
                         <div className="w-10 h-10 overflow-hidden border-2 border-gray-400 rounded-full">
@@ -131,15 +142,14 @@ const Navbar: React.FC = () => {
                         }
                       </div>
                         :
-                        <Link href='/sign-up'>
-                          <button className="w-full px-5 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-[#749B3F] rounded-md hover:bg-[#176D38] focus:outline-none focus:bg-[#176D38]">Sign Up</button>
-                        </Link>
+                        <button
+                    onClick={handleLoginOpen}
+                        className="w-full px-1 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-[#749B3F] rounded-md hover:bg-[#176D38] focus:outline-none focus:bg-[#176D38]">Register</button>
                     }
                   </div>
                 </div>
               </div>
             </div>
-
             <div className="w-[50%] lg:flex lg:justify-center lg:items-center items-center hidden">
               <div className="flex items-center">
                 <Link href='/' className={getNavLinkClass('/')}>
@@ -172,7 +182,7 @@ const Navbar: React.FC = () => {
                   </div>
                 </div>
 
-                <p className="font-rubik">Cart</p>
+                <p className="font-rubik ml-4">Cart</p>
                 {
                   user ? <div className="focus:outline-none cursor-pointer relative group">
                     <div className="w-10 h-10 overflow-hidden border-2 border-gray-400 rounded-full">
@@ -190,15 +200,26 @@ const Navbar: React.FC = () => {
                     </div>
                   </div>
                     :
-                    <Link href={'/register'}>
-                      <button
-                        className="w-full px-5 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-[#749B3F] rounded-md hover:bg-[#176D38] focus:outline-none focus:bg-[#176D38]">Register</button>
-                    </Link>
+                    // <Link href={'/register'}>
+                    //   <button
+                    //     className="w-full px-5 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-[#749B3F] rounded-md hover:bg-[#176D38] focus:outline-none focus:bg-[#176D38]">Register</button>
+                    // </Link>
+                    <button
+                    onClick={handleLoginOpen}
+                        className="w-full px-1 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-[#749B3F] rounded-md hover:bg-[#176D38] focus:outline-none focus:bg-[#176D38]">Register</button>
                 }
               </div>
             </div>
           </nav>
         </div>
+        <AuthModals 
+        isLoginOpen={isLoginOpen}
+        isRegisterOpen={isRegisterOpen}
+        onLoginClose={() => setIsLoginOpen(false)}
+        onRegisterClose={() => setIsRegisterOpen(false)}
+        onSwitchToRegister={handleRegisterOpen}
+        onSwitchToLogin={handleLoginOpen}
+      />
       </header>
     </>
   );
