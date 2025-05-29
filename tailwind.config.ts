@@ -9,7 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        
+        // primaryGreen: '#749B3F',
+        // secondaryGreen: '#176D38',
+        // buttonPrimaryOrange: '#FF6A1A',
       },
       fontFamily: {
         rubik: ['var(--font-rubik)', 'sans-serif'],
