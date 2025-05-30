@@ -1,4 +1,4 @@
-#Fresh Harvests - Frontend Development Task
+# Fresh Harvests - Frontend Development Task
 <div align="center">
   <img src="https://i.ibb.co/35b50Srg/Screenshot-1.png" height="400" width="800" alt="Fresh Harvests"/>
 </div>
@@ -178,6 +178,9 @@ This project is licensed under the MIT License.
 For any questions or further information, please contact: +8801518474975
 
 Maksudul Haque
+
 [Email:smmaksudulhaque2000@gmail.com]
+
 [Linkedin:https://www.linkedin.com/in/maksudulhaque2000/]
+
 [GitHub:https://github.com/maksudulhaque2000]
