@@ -62,7 +62,7 @@ const Blog: React.FC = () => {
                       <h1 className="mt-2 text-[18px] font-medium text-gray-800 font-rubik ">
                         {blog.description}
                       </h1>
-                      <Link href={`/blogs/${blog.id}`} className="flex items-center gap-2 text-[#FF6A1A] font-semibold mt-2">
+                      <Link href={'/'} className="flex items-center gap-2 text-[#FF6A1A] font-semibold mt-2">
                         Read More <FaArrowRight />
                       </Link>
                     </div>
