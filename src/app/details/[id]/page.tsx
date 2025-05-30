@@ -1,5 +1,7 @@
 import React from "react";
 import Details from "./Details";
+import { promises } from "dns";
+import { resolve } from "path";
 
 interface Product {
   id: string;
@@ -23,9 +25,11 @@ interface ApiResponse<T> {
 export default async function ProductDetailsPage({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
-  const { id } = params;
+  const  resolve  = await params;
+  const { id } = resolve;
+  
 
   const res = await fetch(`https://code-commando.com/api/v1/products/${id}`, {
     cache: "no-store",
