@@ -107,38 +107,40 @@ Git
 
 Installation
 Clone the repository:
-
+```
 git clone [(https://github.com/maksudulhaque2000/fresh-harvest-frontend-Job-Task)]
 cd fresh-harvests
-
+```
 Install dependencies:
-
-npm install
-# or
+```
+# npm install
+or
 # yarn install
-# or
+or
 # pnpm install
-
+```
 Running the Project Locally
 To start the development server:
-
+```
 npm run dev
-# or
+or
 # yarn dev
-# or
+or
 # pnpm dev
+```
 
 The application will be accessible at http://localhost:3000 (or another port if 3000 is in use).
 
 Steps to Build and Deploy the Application
 Building the Application
 To create an optimized production build of the application:
-
-npm run build
-# or
+```
+# npm run build
+or
 # yarn build
-# or
-# pnpm build
+or
+#pnpm build
+```
 
 This command will create a .next folder in your project, containing the optimized build output.
 
@@ -175,9 +177,11 @@ Contributions are welcome! If you find any bugs or have suggestions for improvem
 This project is licensed under the MIT License.
 
 ## 📞 Contact
-For any questions or further information, please contact: +8801518474975
+For any questions or further information, please contact:
 
 Maksudul Haque
+
+[Phone:+8801518474975]
 
 [Email:smmaksudulhaque2000@gmail.com]
 
