@@ -1,6 +1,6 @@
 #Fresh Harvests - Frontend Development Task
 <div align="center">
-  <img src="[https://i.ibb.co.com/N6cRP87N/Screenshot-1.png](https://i.ibb.co/35b50Srg/Screenshot-1.png)" height="400" width="800" alt="Fresh Harvests"/>
+  <img src="https://i.ibb.co/35b50Srg/Screenshot-1.png" height="400" width="800" alt="Fresh Harvests"/>
 </div>
 
 Project Title: Frontend Development Task Using Next.js
