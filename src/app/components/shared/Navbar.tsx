@@ -125,17 +125,9 @@ const Navbar: React.FC = () => {
                     </div>
                     {
                       user ? <div onClick={handleMenu} className="w-full flex justify-center focus:outline-none cursor-pointer relative group">
-                        <div className="w-10 h-10 overflow-hidden border-2 border-gray-400 rounded-full">
-                          <img
-                            src={user?.photoURL || photoURL}
-                            className="object-cover w-full h-full"
-                            alt={user?.displayName || "User Profile"}
-                          />
-                        </div>
+                        
                         {
                           menuOpen && <div className="absolute flex flex-col justify-center bg-gray-100 rounded-md px-4 py-3 left-1 top-12 z-50 space-y-3">
-                            <p className="uppercase">{user?.displayName || displayName}</p>
-                            <p>{user?.email || "user@example.com"}</p>
                             <button
                               className="w-full bg-gray-200 rounded-md py-1">Logout</button>
                           </div>
@@ -181,29 +173,15 @@ const Navbar: React.FC = () => {
                     <div className="absolute -top-1 -right-1 w-4 h-4 bg-[#FF6A1A] text-white rounded-full text-xs flex justify-center items-center">3</div>
                   </div>
                 </div>
-
                 <p className="font-rubik ml-4">Cart</p>
                 {
                   user ? <div className="focus:outline-none cursor-pointer relative group">
-                    <div className="w-10 h-10 overflow-hidden border-2 border-gray-400 rounded-full">
-                      <img
-                        src={user?.photoURL || photoURL}
-                        className="object-cover w-full h-full"
-                        alt={user?.displayName || "User Profile"}
-                      />
-                    </div>
                     <div className="absolute group-hover:flex flex-col transform scale-y-0 group-hover:scale-y-100 origin-top ease-in transition duration-150 bg-gray-50 rounded-md px-4 py-3 right-2 top-10 z-50 space-y-2">
-                      <p className="uppercase">{user?.displayName || displayName}</p>
-                      <p>{user?.email || "user@example.com"}</p>
                       <button
                         className="w-full bg-gray-200 rounded-md py-1">Logout</button>
                     </div>
                   </div>
                     :
-                    // <Link href={'/register'}>
-                    //   <button
-                    //     className="w-full px-5 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-[#749B3F] rounded-md hover:bg-[#176D38] focus:outline-none focus:bg-[#176D38]">Register</button>
-                    // </Link>
                     <button
                     onClick={handleLoginOpen}
                         className="w-full px-1 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-[#749B3F] rounded-md hover:bg-[#176D38] focus:outline-none focus:bg-[#176D38]">Register</button>
