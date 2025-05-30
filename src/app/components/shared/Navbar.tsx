@@ -9,7 +9,7 @@ import { VscMenu } from "react-icons/vsc";
 
 import { LuShoppingCart } from "react-icons/lu";
 import Button from "./Button";
-import AuthModals from "../ui/AuthModals";
+import AuthModal from "../AuthModal";
 
 interface User {
   uid: string;
@@ -23,26 +23,12 @@ const Navbar: React.FC = () => {
   const [navbar, setNavbar] = useState<boolean>(false);
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
-  const [isLoginOpen, setIsLoginOpen] = useState(false);
-  const [isRegisterOpen, setIsRegisterOpen] = useState(false);
-
-  const handleLoginOpen = () => {
-    setIsLoginOpen(true);
-    setIsRegisterOpen(false);
-  };
-
-  const handleRegisterOpen = () => {
-    setIsLoginOpen(false);
-    setIsRegisterOpen(true);
-  };
 
   const router = useRouter();
   const pathname = usePathname();
 
  
   const user: User | null = null;
-  const displayName: string = "ALMAS HOSSAIN";
-  const photoURL: string = "/images/about/photo02.png";
 
   const handleNavigate = (): void => {
     router.push('/');
@@ -134,9 +120,7 @@ const Navbar: React.FC = () => {
                         }
                       </div>
                         :
-                        <button
-                    onClick={handleLoginOpen}
-                        className="w-full px-1 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-[#749B3F] rounded-md hover:bg-[#176D38] focus:outline-none focus:bg-[#176D38]">Register</button>
+                        <AuthModal></AuthModal>
                     }
                   </div>
                 </div>
@@ -182,22 +166,13 @@ const Navbar: React.FC = () => {
                     </div>
                   </div>
                     :
-                    <button
-                    onClick={handleLoginOpen}
-                        className="w-full px-1 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-[#749B3F] rounded-md hover:bg-[#176D38] focus:outline-none focus:bg-[#176D38]">Register</button>
+                    <AuthModal></AuthModal>
                 }
               </div>
             </div>
           </nav>
         </div>
-        <AuthModals 
-        isLoginOpen={isLoginOpen}
-        isRegisterOpen={isRegisterOpen}
-        onLoginClose={() => setIsLoginOpen(false)}
-        onRegisterClose={() => setIsRegisterOpen(false)}
-        onSwitchToRegister={handleRegisterOpen}
-        onSwitchToLogin={handleLoginOpen}
-      />
+        
       </header>
     </>
   );

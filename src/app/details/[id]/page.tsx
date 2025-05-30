@@ -1,7 +1,5 @@
 import React from "react";
 import Details from "./Details";
-import { promises } from "dns";
-import { resolve } from "path";
 
 interface Product {
   id: string;
