@@ -1,8 +1,14 @@
-Fresh Harvests - Frontend Development Task
+#Fresh Harvests - Frontend Development Task
+<div align="center">
+  <img src="[https://i.ibb.co.com/N6cRP87N/Screenshot-1.png](https://i.ibb.co/35b50Srg/Screenshot-1.png)" height="400" width="800" alt="Fresh Harvests"/>
+</div>
+
 Project Title: Frontend Development Task Using Next.js
 This project is a responsive and visually accurate front-end application developed as a task for SM Technology. It is designed to strictly adhere to provided Figma designs and integrate with external APIs as documented in Postman.
 
-🎯 Objective
+Live Link: https://fresh-harvest-frontend-job-task-b8r55na43.vercel.app/
+
+## 🎯 Objective
 The primary objective of this project was to design and develop a robust, responsive, and visually accurate front-end application. Key aspects included:
 
 Design Implementation: Translating Figma designs into a pixel-perfect UI.
@@ -13,7 +19,7 @@ API Integration: Connecting the frontend with provided APIs using modern data fe
 
 Code Quality: Adhering to best practices for clean, reusable, and maintainable code.
 
-🚀 Technology Stack
+## 🚀 Technology Stack
 This project leverages the following modern web technologies:
 
 Frontend Framework: Next.js
@@ -36,7 +42,7 @@ Slider/Carousel: Swiper.js
 
 Utility Libraries: clsx, tailwind-merge (for cn utility)
 
-✨ Task Details & Implementation Highlights
+## ✨ Task Details & Implementation Highlights
 Design Implementation
 Pixel-Perfect UI: The application's UI has been meticulously developed to match the provided Figma designs, focusing on precise layouts, typography, and color schemes.
 
@@ -76,7 +82,7 @@ The application is build-ready and optimized for deployment on Vercel.
 
 Next.js's built-in optimizations for performance and SEO (Server-Side Rendering, Image Optimization, Code Splitting) are leveraged.
 
-📦 Deliverables
+## 📦 Deliverables
 A fully functional and responsive frontend application.
 
 All core components and pages implemented as per the provided design requirements.
@@ -87,7 +93,7 @@ This Git repository containing the complete source code.
 
 Comprehensive documentation within this README.md file.
 
-⚙️ Project Setup
+## ⚙️ Project Setup
 Follow these steps to get the project up and running on your local machine.
 
 Prerequisites
@@ -160,7 +166,7 @@ Vercel will then build and deploy your application to a production URL.
 
 Upon successful deployment, Vercel will provide you with the live URL of your application.
 
-🤝 Contributing
+## 🤝 Contributing
 (Optional section, if you want to allow contributions)
 
 Contributions are welcome! If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
@@ -168,7 +174,7 @@ Contributions are welcome! If you find any bugs or have suggestions for improvem
 
 This project is licensed under the MIT License.
 
-📞 Contact
+## 📞 Contact
 For any questions or further information, please contact: +8801518474975
 
 Maksudul Haque
